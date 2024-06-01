@@ -1,7 +1,7 @@
 <template>
   <div id="home" class="q-pa-md row q-gutter-md q-pb-xl justify-center q-pt-xl" style="background-color: #E9CFC2;">
     <div class="col-xs-8 col-md-4 text-right-md-col-md">
-      <div class="col-12" style="display: flex; flex-direction: column; align-items: flex-end;">
+      <div class="col-12" v-if="!isMobile" :key="forceRerenderFlag" style="display: flex; flex-direction: column; align-items: flex-end;">
         <q-img 
           src="/_nuxt/SAVE_20230224_194933.jpg" 
           rounded="true" 

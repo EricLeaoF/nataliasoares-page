@@ -1,6 +1,6 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-header reveal elevated class="bg-white"  >
+    <q-header reveal elevated class="bg-secondary"  >
       <q-navbar v-if="isMobile">
         <q-toolbar>
           <q-btn flat round dense icon="menu" @click="leftDrawerOpen = !leftDrawerOpen" />
@@ -118,16 +118,23 @@ export default defineComponent({
     const isMobile = ref($q.platform.is.mobile)
     const leftDrawerOpen = ref(false)
     const navigateTo = (routeName) => {
+      if (isMobile.value) {
+        leftDrawerOpen.value = false
+      }
       console.log(routeName)
       if (routeName === 'home') {
+        setTimeout(() => {
           window.scrollTo({
               top: 0,
               left: 0,
               behavior: 'smooth'
           });
+        }, 10);
       } else {
+        setTimeout(() => {
           var element = document.getElementById(routeName)
           element.scrollIntoView({ behavior: 'smooth' });
+        }, 10);
       } 
     }
 
