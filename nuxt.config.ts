@@ -32,6 +32,7 @@ export default defineNuxtConfig({
   },
   modules: ['nuxt-quasar-ui', 'nuxt-icon'],
   quasar: {
+    animations: 'all',
     sassVariables: '@/assets/styles/quasar.variables.sass',
     extras: {
       font: 'roboto-font',

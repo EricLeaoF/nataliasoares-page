@@ -1,6 +1,6 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-header reveal elevated class="bg-secondary"  >
+    <div reveal elevated class="bg-white" style="height: 65px" >
       <q-navbar v-if="isMobile">
         <q-toolbar>
           <q-btn flat round dense icon="menu" @click="leftDrawerOpen = !leftDrawerOpen" />
@@ -41,7 +41,7 @@
         </q-tabs>
       </q-navbar>
       
-    </q-header>
+    </div>
 
     <q-page-container style="background-color: #F6F6F6 ">
       <router-view />

@@ -1,16 +1,16 @@
 <template>
-  <div id="home" class="q-pa-md row q-gutter-md q-pb-xl justify-center q-pt-xl" style="background-color: #E9CFC2;">
-    <div class="col-xs-8 col-md-4 text-right-md-col-md">
-      <div class="col-12" v-if="!isMobile" :key="forceRerenderFlag" style="display: flex; flex-direction: column; align-items: flex-end;">
-        <q-img 
-          src="/_nuxt/SAVE_20230224_194933.jpg" 
+  <div id="home" class="q-pa-md row q-gutter-md q-pb-xl justify-center q-pt-xl" style="background-color: #E9CFC2; height: 800px">
+    <div class="col-md-4 text-right-md-col-md">
+      <div class="col-12 q-hidden-xs img-animation" v-if="!isMobile && $q.screen.width > 1000" :key="forceRerenderFlag" style="display: flex; flex-direction: column; align-items: flex-end;">
+        <q-img
+          src="/_nuxt/assets/SAVE_20230224_194933.jpg" 
           rounded="true" 
-          class="q-mb-md rounded-borders" 
+          class="q-mb-md rounded-borders .fade-in" 
           style="max-width: 400px; height: auto;">
         </q-img>
       </div>
     </div>
-    <div class="col-xs-12 col-md-6 justify-start q-pl-xl">
+    <div class="col-xs-8 col-md-6 justify-start q-pl-xl">
       <h4 class="text-left text-secondary" style="font-size: 50px">
         <strong>Natália Soares Rocha</strong>
       </h4>
@@ -27,46 +27,116 @@
       </div>    
     </div>
   </div>
-
+  <br>
   <div id="sobre" class="q-pa-md row justify-center q-gutter-md" style="overflow-x: hidden;">
-    <div :class="!isMobile ? 'col-xs-8 col-md-6 q-pt-xl' : 'col-xs-12 col-md-6 q-pt-xl q-pl-md'" :key="forceRerenderFlag">
-      <div class="text-h4 text-secondary"><b> Sobre Mim </b></div>
+    <div :class="!isMobile ? 'col-xs-8 col-md-6 col-lg-6 col-xl-3 q-pt-xl' : 'col-xs-12 col-md-6 q-pt-xl q-pl-md'" :key="forceRerenderFlag">
+      <div class="text-h4 text-secondary text-center"><b> Sobre Mim </b></div>
       <div style="margin-top: 55px">
-        <p>Psicóloga desde 2022, pela Universidade Cidade de São Paulo, e pós graduada em Fenomenologia-Existencial na Universidade Cruzeiro do Sul. Atendo adolescentes e adultos através da Psicoterapia Humanista Existencial, proporcionando um ambiente seguro e acolhedor para a promoção do bem-estar e desenvolvimento.</p>
-        <p>Há uma forma de existir única em cada um de nós, para mim, o sentido se encontra na Psicologia, no ouvir e no acolher.</p>
-        <p>Sua caminhada não precisa ser sozinho, você pode compartilhar suas dores e, juntos, podemos trabalhar sobre elas.</p>
+        <p><b>Psicóloga desde 2022, pela Universidade Cidade de São Paulo, e pós graduada em Fenomenologia-Existencial na Universidade Cruzeiro do Sul. Atendo adolescentes e adultos através da Psicoterapia Humanista Existencial, proporcionando um ambiente seguro e acolhedor para a promoção do bem-estar e desenvolvimento.</b></p>
+        <p><b>Há uma forma de existir única em cada um de nós, para mim, o sentido se encontra na Psicologia, no ouvir e no acolher.</b></p>
+        <p><b>Sua caminhada não precisa ser sozinho, você pode compartilhar suas dores e, juntos, podemos trabalhar sobre elas.</b></p>
       </div>
     </div>
   </div>
 
-  <div class="main-layout">
+  <div class="main-layout" style="margin-top: 100px">
     <header class="text-secondary">
       <h1>"A psicoterapia permite o cuidado com a sua existência"</h1>
       <p>Psicóloga Clínica | Ajudando você a trilhar o seu caminho</p>
     </header>
 
     <section class="services">
-      <div class="services-content">
+      <div class="services-content bg-primary">
           <h2>A TERAPIA</h2>
       </div>
     </section>
 
     <section class="testimonials">
       <div class="text-column-1">
-        <p>é um processo de acolhimento e descoberta, livre de julgamentos</p>
+        <p>É um processo de acolhimento e descoberta, livre de julgamentos</p>
       </div>
       <div class="text-column-2">
-        <p>pode te ajudar a se entender e enxergar novos horizontes</p>
+        <p>Pode te ajudar a se entender e enxergar novos horizontes</p>
       </div>
       <div class="text-column-3">
-        <p>é sobre abraçar a sua história para um presente mais leve</p>
+        <p>É sobre abraçar a sua história para um presente mais leve</p>
       </div>
     </section>
   </div>
 
+  <div class="q-pa-md row">
+    <div class="col-12 text-h4 text-secondary text-center q-pb-lg"><b> Avaliações dos pacientes </b></div>
+    <q-carousel
+      v-model="slide"
+      transition-prev="slide-right"
+      transition-next="slide-left"
+      swipeable
+      animated
+      control-color="secondary"
+      navigation
+      padding
+      height="300px"
+      class="bg-primary col-12 rounded-borders"
+      infinite
+    >
+      <q-carousel-slide :name="1" class="column no-wrap">
+        <div class="row fit justify-center items-center q-gutter-xs q-col-gutter no-wrap">
+          <q-card class="col-3" flat bordered>
+            <q-card-section>
+              <div class="text-h5 q-mt-sm q-mb-xs">Title</div>
+              <div class="text-caption text-grey">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </div>
+              <!-- <div class="text-overline text-green-9 text-center q-pt-md">R$ 00,00</div> -->
+            </q-card-section>
+          </q-card>        
+        </div>
+      </q-carousel-slide>
+      <q-carousel-slide :name="2" class="column no-wrap">
+        <div class="row fit justify-center items-center q-gutter-xs q-col-gutter no-wrap">
+          <q-card class="col-3" flat bordered>
+            <q-card-section>
+              <div class="text-h5 q-mt-sm q-mb-xs">Title</div>
+              <div class="text-caption text-grey">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </div>
+              <!-- <div class="text-overline text-green-9 text-center q-pt-md">R$ 00,00</div> -->
+            </q-card-section>
+          </q-card> 
+        </div>
+      </q-carousel-slide>
+      <q-carousel-slide :name="3" class="column no-wrap">
+        <div class="row fit justify-center items-center q-gutter-xs q-col-gutter no-wrap">
+          <q-card class="col-3" flat bordered>
+            <q-card-section>
+              <div class="text-h5 q-mt-sm q-mb-xs">Title</div>
+              <div class="text-caption text-grey">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </div>
+              <!-- <div class="text-overline text-green-9 text-center q-pt-md">R$ 00,00</div> -->
+            </q-card-section>
+          </q-card> 
+        </div>
+      </q-carousel-slide>
+      <q-carousel-slide :name="4" class="column no-wrap">
+        <div class="row fit justify-center items-center q-gutter-xs q-col-gutter no-wrap">
+          <q-card class="col-3" flat bordered>
+            <q-card-section>
+              <div class="text-h5 q-mt-sm q-mb-xs">Title</div>
+              <div class="text-caption text-grey">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </div>
+              <!-- <div class="text-overline text-green-9 text-center q-pt-md">R$ 00,00</div> -->
+            </q-card-section>
+          </q-card> 
+        </div>
+      </q-carousel-slide>
+    </q-carousel>
+  </div>
+
   <div class="q-pa-md row justify-center q-gutter-md" style="overflow-x: hidden;">
-    <div :class="!isMobile ? 'col-xs-8 col-md-3 q-pt-xl' : 'col-xs-12 col-md-2 q-pt-xl q-pl-lg'" :key="forceRerenderFlag">
-      <div id="contato" class="text-h4 text-secondary"><b> Entre em contato </b></div>
+    <div id="contato" :class="!isMobile ? 'col-xs-8 col-md-4 col-lg-4 col-xl-2 q-pt-xl' : 'col-xs-12 col-md-2 q-pt-xl q-pl-lg'" :key="forceRerenderFlag">
+      <div class="text-h4 text-secondary"><b> Entre em contato </b></div>
         <p class="q-pt-lg q-pb-lg"> Atendimentos online de segunda à sexta, das 8h às 21h </p>
         <font-awesome-icon icon="fas envelope" />
         <ul class="q-gutter-md">
@@ -136,6 +206,7 @@ useHead({
   import axios from 'axios'
 
   const $q = useQuasar()
+  const slide = ref(1)
   const name = ref('')
   const email = ref('')
   const phone = ref('')
@@ -151,6 +222,7 @@ useHead({
   }
 
   onMounted(() => {
+    console.log($q.screen)
     forceRerenderFlag.value++
     window.scrollTo(0, 0)
     const messageText = LocalStorage.getItem('message_text')
@@ -199,6 +271,21 @@ const onSubmit = async () => {
   }
   }
 
+  @keyframes fadeInDown {
+   0% {
+      opacity: 0;
+      transform: translateY(0);
+   }
+   50% {
+    opacity: 0.5;
+    transform: translateY(-10px);
+   }
+   100% {
+      opacity: 1;
+      transform: translateY(0);
+   }
+} 
+
 .main-layout {
   max-width: 800px;
   margin: 0 auto;
@@ -231,6 +318,10 @@ p {
   animation: fadeIn 2s ease-out;
 }
 
+.img-animation {
+  animation: fadeInDown 1s ease-out;
+}
+
 .testimonials {
   display: flex;
   justify-content: space-between;
@@ -249,13 +340,13 @@ p {
 .text-column-2 {
   flex: 1;
   margin: 0;
-  margin-top: -20px;
+  margin-top: 50px;
 }
 
 .text-column-3 {
   flex: 1;
   margin: 0;
-  margin-top: 25px;
+  margin-top: 10px;
 }
 
 h2 {
