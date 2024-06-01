@@ -29,7 +29,7 @@
   </div>
 
   <div id="sobre" class="q-pa-md row justify-center q-gutter-md" style="overflow-x: hidden;">
-    <div :class="!isMobile ? 'col-xs-8 col-md-6 q-pt-xl' : 'col-xs-12 col-md-6 q-pt-xl q-pl-xl'" :key="forceRerenderFlag">
+    <div :class="!isMobile ? 'col-xs-8 col-md-6 q-pt-xl' : 'col-xs-12 col-md-6 q-pt-xl q-pl-md'" :key="forceRerenderFlag">
       <div class="text-h4 text-secondary"><b> Sobre Mim </b></div>
       <div style="margin-top: 55px">
         <p>Psicóloga desde 2022, pela Universidade Cidade de São Paulo, e pós graduada em Fenomenologia-Existencial na Universidade Cruzeiro do Sul. Atendo adolescentes e adultos através da Psicoterapia Humanista Existencial, proporcionando um ambiente seguro e acolhedor para a promoção do bem-estar e desenvolvimento.</p>
@@ -65,7 +65,7 @@
   </div>
 
   <div class="q-pa-md row justify-center q-gutter-md" style="overflow-x: hidden;">
-    <div :class="!isMobile ? 'col-xs-8 col-md-3 q-pt-xl' : 'col-xs-12 col-md-2 q-pt-xl q-pl-xl'" :key="forceRerenderFlag">
+    <div :class="!isMobile ? 'col-xs-8 col-md-3 q-pt-xl' : 'col-xs-12 col-md-2 q-pt-xl q-pl-lg'" :key="forceRerenderFlag">
       <div id="contato" class="text-h4 text-secondary"><b> Entre em contato </b></div>
         <p class="q-pt-lg q-pb-lg"> Atendimentos online de segunda à sexta, das 8h às 21h </p>
         <font-awesome-icon icon="fas envelope" />
