@@ -23,7 +23,7 @@
         </p>
       </div>  
       <div class="row q-pt-xl">
-        <q-btn href="https://api.whatsapp.com/send/?phone=5511973549232&text&type=phone_number&app_absent=0" target="_blank" label="Agendar uma consulta" color="secondary" class="text-secondary col-4 items-center"></q-btn>
+        <q-btn href="https://api.whatsapp.com/send/?phone=5511973549232&text&type=phone_number&app_absent=0" target="_blank" label="Vamos conversar?" color="secondary" class="text-secondary col-4 items-center"></q-btn>
       </div>    
     </div>
   </div>
@@ -41,13 +41,13 @@
 
   <div class="main-layout" style="margin-top: 100px">
     <header class="text-secondary">
-      <h1>"A psicoterapia permite o cuidado com a sua existência"</h1>
+      <h2>"A psicoterapia permite o cuidado com a sua existência"</h2>
       <p>Psicóloga Clínica | Ajudando você a trilhar o seu caminho</p>
     </header>
 
     <section class="services">
       <div class="services-content bg-primary">
-          <h2>A TERAPIA</h2>
+          <h2> <b> A TERAPIA </b></h2>
       </div>
     </section>
 
