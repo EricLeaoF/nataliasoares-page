@@ -1,7 +1,7 @@
 <template>
   <div id="home" class="q-pa-md row q-gutter-md q-pb-xl justify-center q-pt-xl" style="background-color: #E9CFC2; height: 800px">
-    <div class="col-md-4 text-right-md-col-md">
-      <div class="col-12 q-hidden-xs img-animation" v-if="!isMobile && $q.screen.width > 1000" :key="forceRerenderFlag" style="display: flex; flex-direction: column; align-items: flex-end;">
+    <div v-if="!isMobile" class="col-md-4 text-right-md-col-md">
+      <div v-if="!isMobile && $q.screen.width > 1000" :key="forceRerenderFlag" class="col-12 img-animation" style="display: flex; flex-direction: column; align-items: flex-end;">
         <q-img
           src="/_nuxt/assets/SAVE_20230224_194933.jpg" 
           rounded="true" 
@@ -10,20 +10,22 @@
         </q-img>
       </div>
     </div>
-    <div class="col-xs-8 col-md-6 justify-start q-pl-xl">
+    <div class="col-xs-11 col-md-7 col-lg-4 col-xl-4 justify-start">
       <h4 class="text-left text-secondary" style="font-size: 50px">
         <strong>Natália Soares Rocha</strong>
       </h4>
       <p class="text-left text-black" style="margin-top: -60px">
         <strong>CRP 06/189758</strong>
       </p>
+      <br>
+      <p class="text-h4 text-secondary">Psicóloga Clínica | Ajudando você a trilhar seu caminho</p>
       <div style="margin-top: 30px">
-        <p class="text-secondary" style="color: #999999; font-size: 25px">
-          "Quando não somos mais capazes de mudar uma situação, somos desafiados a mudar a nós mesmos. — Viktor Frankl"
+        <p class="text-secondary" style="color: #999999; font-size: 15px">
+          "Quando não somos mais capazes de mudar uma situação, somos desafiados a mudar a nós mesmos." - V. Frankl 
         </p>
       </div>  
       <div class="row q-pt-xl">
-        <q-btn href="https://api.whatsapp.com/send/?phone=5511973549232&text&type=phone_number&app_absent=0" target="_blank" label="Vamos conversar?" color="secondary" class="text-secondary col-4 items-center"></q-btn>
+        <q-btn href="https://api.whatsapp.com/send/?phone=5511973549232&text&type=phone_number&app_absent=0" target="_blank" label="Vamos conversar?" color="secondary" class="text-secondary col-xs-12 col-md-4 col-lg-4 col-xl-4 items-center"></q-btn>
       </div>    
     </div>
   </div>
@@ -42,7 +44,7 @@
   <div class="main-layout" style="margin-top: 100px">
     <header class="text-secondary">
       <h2>"A psicoterapia permite o cuidado com a sua existência"</h2>
-      <p>Psicóloga Clínica | Ajudando você a trilhar o seu caminho</p>
+      <p style="font-size: 10px"> B. T. Sapienza </p>
     </header>
 
     <section class="services">
@@ -64,8 +66,8 @@
     </section>
   </div>
 
-  <div class="q-pa-md row">
-    <div class="col-12 text-h4 text-secondary text-center q-pb-lg"><b> Avaliações dos pacientes </b></div>
+  <div class="col-12 text-h4 text-secondary text-center q-pb-lg q-pt-xl"><b> Avaliações </b></div>
+  <div class="q-pa-md row bg-primary">
     <q-carousel
       v-model="slide"
       transition-prev="slide-right"
@@ -81,7 +83,7 @@
     >
       <q-carousel-slide :name="1" class="column no-wrap">
         <div class="row fit justify-center items-center q-gutter-xs q-col-gutter no-wrap">
-          <q-card class="col-3" flat bordered>
+          <q-card class="col-xs-12 col-md-3 col-lg-3 col-xl-3" flat bordered>
             <q-card-section>
               <div class="text-h5 q-mt-sm q-mb-xs">Title</div>
               <div class="text-caption text-grey">
@@ -94,7 +96,7 @@
       </q-carousel-slide>
       <q-carousel-slide :name="2" class="column no-wrap">
         <div class="row fit justify-center items-center q-gutter-xs q-col-gutter no-wrap">
-          <q-card class="col-3" flat bordered>
+          <q-card class="col-xs-12 col-md-3 col-lg-3 col-xl-3" flat bordered>
             <q-card-section>
               <div class="text-h5 q-mt-sm q-mb-xs">Title</div>
               <div class="text-caption text-grey">
@@ -107,7 +109,7 @@
       </q-carousel-slide>
       <q-carousel-slide :name="3" class="column no-wrap">
         <div class="row fit justify-center items-center q-gutter-xs q-col-gutter no-wrap">
-          <q-card class="col-3" flat bordered>
+          <q-card class="col-xs-12 col-md-3 col-lg-3 col-xl-3" flat bordered>
             <q-card-section>
               <div class="text-h5 q-mt-sm q-mb-xs">Title</div>
               <div class="text-caption text-grey">
@@ -120,7 +122,7 @@
       </q-carousel-slide>
       <q-carousel-slide :name="4" class="column no-wrap">
         <div class="row fit justify-center items-center q-gutter-xs q-col-gutter no-wrap">
-          <q-card class="col-3" flat bordered>
+          <q-card class="col-xs-12 col-md-3 col-lg-3 col-xl-3" flat bordered>
             <q-card-section>
               <div class="text-h5 q-mt-sm q-mb-xs">Title</div>
               <div class="text-caption text-grey">
@@ -137,7 +139,7 @@
   <div class="q-pa-md row justify-center q-gutter-md" style="overflow-x: hidden;">
     <div id="contato" :class="!isMobile ? 'col-xs-8 col-md-4 col-lg-4 col-xl-2 q-pt-xl' : 'col-xs-12 col-md-2 q-pt-xl q-pl-lg'" :key="forceRerenderFlag">
       <div class="text-h4 text-secondary"><b> Entre em contato </b></div>
-        <p class="q-pt-lg q-pb-lg"> Atendimentos online de segunda à sexta, das 8h às 21h </p>
+        <p class="q-pt-lg q-pb-lg"> Atendimento online e presencial de segunda à sexta, das 8h às 21h </p>
         <font-awesome-icon icon="fas envelope" />
         <ul class="q-gutter-md">
           <li>
@@ -151,9 +153,21 @@
               nataliasoaresrocha.psi@gmail.com
             </a>
           </li>
+          <li>
+            <font-awesome-icon icon="fa-brands fa-instagram" style="font-size: 25px; margin-bottom: -5px; margin-right: 10px" />
+            <a href="https://instagram.com/nataliasoares.psi" target="_blank" class="contact-link">
+              nataliasoares.psi
+            </a>
+          </li>
+          <li>
+            <font-awesome-icon icon="fa-brands fa-linkedin" style="font-size: 25px; margin-bottom: -5px; margin-right: 10px" />
+            <a href="https://www.linkedin.com/in/natalia-psi06189758" target="_blank" class="contact-link">
+              Natália Soares Rocha
+            </a>
+          </li>
         </ul>
     </div>
-    <div :class="!isMobile ? 'q-pl-xl q-pt-xl col-xs-10 col-md-4' : 'col-12'" :key="forceRerenderFlag">
+    <div :class="!isMobile ? 'q-pt-xl col-xs-10 col-md-4 col-lg-4 col-xl-3' : 'col-12'" :key="forceRerenderFlag">
       <q-card v-if="!isMobile">
         <q-card-section>
           <q-form action="https://formsubmit.co/nataliasoaresrocha.psi@gmail.com" method="post" class="q-gutter-md q-pa-xl" ref="myForm">
@@ -178,7 +192,7 @@
         <div class="q-pb-md row justify-center">
           <q-btn label="Enviar" type="submit" color="secondary" :loading="loading" :disable="mailSent"></q-btn>
         </div>
-        <input type="hidden" value="http:localhost:3000/success" name="_next">
+        <input type="hidden" value="https://nataliasoaresrochapsi.com/success" name="_next">
         <input type="hidden" name="_cc" value="ericlf2015@hotmail.com">
         <input type="hidden" name="_autoresponse" value="Obrigado pelo envio. Logo entraremos em contato!">
       </q-form>
@@ -188,6 +202,10 @@
 
 <script setup>
 useHead({
+  htmlAttrs: {
+    lang: 'pt-BR',
+    style: 'font-size: 13px'
+  },
   title: "Natália Soares Rocha - Psicóloga",
   meta: [
     {

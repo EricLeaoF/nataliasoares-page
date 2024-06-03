@@ -21,7 +21,7 @@
         
       </q-navbar>
       <q-navbar v-else>
-        <q-tabs dense style="height: 50px;" class="text-secondary">
+        <q-tabs dense style="height: 50px;" class="text-secondary gt-xs">
           <q-space></q-space>
           <q-tab style="margin-left: 160px" clickable @click="navigateTo('home')">INÍCIO</q-tab>
           <q-tab clickable @click="navigateTo('sobre')">SOBRE MIM</q-tab>
@@ -67,34 +67,14 @@
         
       </div>
     </div>
-    <div v-else reveal bordered class="bg-secondary text-white" style="height: 150px; display: flex; align-items: center; justify-content: space-between;">
+    <div v-else reveal bordered class="row bg-secondary text-white" style="height: 150px; display: flex; align-items: center; justify-content: space-between;">
       <div class="col-4">
         <!-- Conteúdo da div à esquerda -->
       </div>
-      <div class="col-4" style="margin-left: 200px">
-        <h8>©2024 por Natália Soares Rocha</h8>
-      </div>
-      <div class="col-4 q-gutter-md q-pr-md">
-        <div class="text"><a style="color: white" href="mailto:nataliasoaresrocha.psi@gmail.com">nataliasoaresrocha.psi@gmail.com</a></div>
-        <div class="text"> (11) 97354 9232 </div>
-        <div>
-          <a href="https://api.whatsapp.com/send/?phone=5511973549232&text&type=phone_number&app_absent=0" target="_blank">
-            <font-awesome-icon icon="fa-brands fa-whatsapp" style="font-size: 25px; margin-bottom: -8px; margin-right: 30px" class="text-white" />
-          </a>
-
-          <a href="https://instagram.com/nataliasoares.psi" target="_blank">
-            <font-awesome-icon icon="fa-brands fa-instagram" style="font-size: 25px; margin-bottom: -8px; margin-right: 30px" class="text-white" />
-          </a>
-
-          <a href="https://www.linkedin.com/in/natalia-psi06189758" target="_blank">
-            <font-awesome-icon icon="fa-brands fa-linkedin" style="font-size: 25px; margin-bottom: -8px; margin-right: 30px" class="text-white" />
-          </a>
-        </div>
-        
+      <div class="col-12 text-center q-pb-xl">
+        <h8>©2024 por Natália Soares Rocha.</h8>
       </div>
     </div>
-
-
   </q-layout>
 
   
@@ -118,9 +98,7 @@ export default defineComponent({
     const isMobile = ref($q.platform.is.mobile)
     const leftDrawerOpen = ref(false)
     const navigateTo = (routeName) => {
-      if (isMobile.value) {
-        leftDrawerOpen.value = false
-      }
+      leftDrawerOpen.value = false
       console.log(routeName)
       if (routeName === 'home') {
         setTimeout(() => {
