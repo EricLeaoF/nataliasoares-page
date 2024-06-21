@@ -1,7 +1,7 @@
 <template>
-  <div id="home" class="q-pa-md row q-gutter-md q-pb-xl justify-center q-pt-xl" style="background-color: #E9CFC2; height: 800px">
-    <div v-if="!isMobile" class="col-md-4 text-right-md-col-md">
-      <div v-if="!isMobile && $q.screen.width > 1000" :key="forceRerenderFlag" class="col-12 img-animation" style="display: flex; flex-direction: column; align-items: flex-end;">
+  <div id="home" class="q-pa-md row q-gutter-md q-pb-xl justify-center q-pt-xl" style="background-color: #E9CFC2; height: 800px;">
+    <div v-if="!isMobile" class="col-md-4 text-right-md-col-md" style="max-width: 500px;">
+      <div v-if="!isMobile && $q.screen.width > 1000" :key="forceRerenderFlag" class="col-12 img-animation" style="display: flex; flex-direction: column; align-items: center;">
         <q-img
           src="/_nuxt/assets/SAVE_20230224_194933.jpg" 
           rounded="true" 
@@ -10,7 +10,21 @@
         </q-img>
       </div>
     </div>
-    <div class="col-xs-11 col-md-7 col-lg-4 col-xl-4 justify-start">
+    <div class="" style="max-width: 400px">
+      <div class="row justify-center">
+        <img src="/_nuxt/assets/logo-principal.png" style="max-width: 350px">
+      </div>
+      <p class="text-center text-black" style="margin-top: -70px">
+        <strong>CRP 06/189758</strong>
+      </p>
+      <p class="text-center text-secondary" style="color: #999999; font-size: 20px">
+        <strong>Contruindo um ambiente seguro para que você se conheça</strong> 
+      </p>
+      <div class="row q-pt-xl justify-center">
+        <q-btn href="https://api.whatsapp.com/send/?phone=5511973549232&text&type=phone_number&app_absent=0" target="_blank" label="Vamos conversar?" color="secondary" class="text-secondary col-xs-8 col-md-4 col-lg-5 col-xl-4 items-center"></q-btn>
+      </div>
+    </div>
+    <!-- <div class="col-xs-11 col-md-7 col-lg-4 col-xl-4 justify-start">
       <h4 class="text-left text-secondary" style="font-size: 50px">
         <strong>Natália Soares Rocha</strong>
       </h4>
@@ -18,7 +32,7 @@
         <strong>CRP 06/189758</strong>
       </p>
       <br>
-      <p class="text-h4 text-secondary">Psicóloga Clínica | Ajudando você a trilhar seu caminho</p>
+      <p class="text-h4 text-secondary">Psicóloga Clínica</p>
       <div style="margin-top: 30px">
         <p class="text-secondary" style="color: #999999; font-size: 15px">
           "Quando não somos mais capazes de mudar uma situação, somos desafiados a mudar a nós mesmos." - V. Frankl 
@@ -27,19 +41,39 @@
       <div class="row q-pt-xl">
         <q-btn href="https://api.whatsapp.com/send/?phone=5511973549232&text&type=phone_number&app_absent=0" target="_blank" label="Vamos conversar?" color="secondary" class="text-secondary col-xs-12 col-md-4 col-lg-4 col-xl-4 items-center"></q-btn>
       </div>    
-    </div>
+    </div> -->
   </div>
   <br>
-  <div id="sobre" class="q-pa-md row justify-center q-gutter-md" style="overflow-x: hidden;">
-    <div :class="!isMobile ? 'col-xs-8 col-md-6 col-lg-6 col-xl-3 q-pt-xl' : 'col-xs-12 col-md-6 q-pt-xl q-pl-md'" :key="forceRerenderFlag">
+  <!-- <div id="sobre" class="q-pa-md row justify-center q-gutter-md" style="overflow-x: hidden;">
+    <div :class="!isMobile ? 'col-xs-8 col-md-6 col-lg-6 col-xl-4 q-pt-xl' : 'col-xs-12 col-md-6 q-pt-xl q-pl-md'" :key="forceRerenderFlag">
       <div class="text-h4 text-secondary text-center"><b> Sobre Mim </b></div>
       <div style="margin-top: 55px">
-        <p><b>Psicóloga desde 2022, pela Universidade Cidade de São Paulo, e pós graduada em Fenomenologia-Existencial na Universidade Cruzeiro do Sul. Atendo adolescentes e adultos através da Psicoterapia Humanista Existencial, proporcionando um ambiente seguro e acolhedor para a promoção do bem-estar e desenvolvimento.</b></p>
-        <p><b>Há uma forma de existir única em cada um de nós, para mim, o sentido se encontra na Psicologia, no ouvir e no acolher.</b></p>
-        <p><b>Sua caminhada não precisa ser sozinho, você pode compartilhar suas dores e, juntos, podemos trabalhar sobre elas.</b></p>
+        <p><b>Psicóloga desde 2022, pela Universidade Cidade de São Paulo, e pós graduada em Fenomenologia-Existencial na Universidade Cruzeiro do Sul. </b></p>
+        <p><b>Atendo adolescentes, adultos, casais e famílias através da Psicoterapia Humanista-Existencial, proporcionando um ambiente seguro e acolhedor para cada paciente.</b></p>
+        <p><b>Acredito no desenvolvimento pleno de tudo que você pode se tornar. Acima de diagnósticos, existe um ser humano com uma história a ser revisitada, com feridas se curando e um futuro a viver.</b></p>
       </div>
     </div>
+  </div> -->
+  <div class="q-pa-md row q-gutter-md justify-center q-gutter-md" style="overflow-x: hidden;">
+    <div id="sobre" :class="!isMobile ? 'col-xs-12 col-sm-12 col-md-5 col-lg-5 col-xl-5' : 'col-xs-12 col-md-2 q-pt-xl'" :key="forceRerenderFlag" style="max-width: 500px;">
+      <div class="text-h4 text-secondary text-center"><b> Sobre Mim </b></div>
+      <div style="margin-top: 55px" class="">
+          <p><b>Psicóloga desde 2022, pela Universidade Cidade de São Paulo, e pós graduada em Fenomenologia-Existencial na Universidade Cruzeiro do Sul. Atendo adolescentes, adultos, casais e famílias através da Psicoterapia Humanista-Existencial, proporcionando um ambiente seguro e acolhedor para cada paciente. Acredito no desenvolvimento pleno de tudo que você pode se tornar. Acima de diagnósticos, existe um ser humano com uma história a ser revisitada, com feridas se curando e um futuro a viver.</b></p>
+          <h6 class="text-center"><strong>Abordagem Humanista-Existencial</strong></h6>
+          <p><b>A abordagem está relacionada com o modo que cada psicólogo se orienta na clínica, as teorias que ele se identifica e vai trabalhar.</b></p>
+          <p><b>Na minha abordagem, acreditamos na responsabilização de cada pessoa pela própria vida, buscamos ampliar o olhar do paciente para novas possibilidades nos contextos vividos e explorar formas de agir. É tanto para aqueles que buscam curar-se, que querem mudança em suas vidas ou estão passando por algum sofrimento, como para os que querem se conhecer e olhar de um novo jeito para a vida.</b></p>
+        </div>
+    </div>
+    <div :class="!isMobile ? '' : 'col-12'" :key="forceRerenderFlag">
+      <q-img
+        src="/_nuxt/assets/5I6A2691.JPG" 
+        rounded="true" 
+        class="q-mb-md rounded-borders .fade-in" 
+        style="max-width: 400px; height: auto; width: 400px">
+      </q-img>
+    </div>
   </div>
+
 
   <div class="main-layout" style="margin-top: 100px">
     <header class="text-secondary">
@@ -57,7 +91,7 @@
       <div class="text-column-1">
         <p>É um processo de acolhimento e descoberta, livre de julgamentos</p>
       </div>
-      <div class="text-column-2">
+      <div class="text-column-2 q-pa-lg text-center">
         <p>Pode te ajudar a se entender e enxergar novos horizontes</p>
       </div>
       <div class="text-column-3">
@@ -77,58 +111,72 @@
       control-color="secondary"
       navigation
       padding
-      height="300px"
+      height="380px"
       class="bg-primary col-12 rounded-borders"
       infinite
     >
       <q-carousel-slide :name="1" class="column no-wrap">
         <div class="row fit justify-center items-center q-gutter-xs q-col-gutter no-wrap">
-          <q-card class="col-xs-12 col-md-3 col-lg-3 col-xl-3" flat bordered>
+          <q-card class="col-xs-12 col-md-5 col-lg-4 col-xl-3" flat bordered>
             <q-card-section>
-              <div class="text-h5 q-mt-sm q-mb-xs">Title</div>
-              <div class="text-caption text-grey">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              <q-rating
+                v-model="ratingModel"
+                size="2em"
+                color="orange"
+                readonly
+              />
+              <div class="text-caption text-grey q-pt-md">
+                <p>
+                  "Estar 1 hora por semana com a Natália é minha 1 hora por semana que sei que posso falar tudo que estiver passando pela minha cabeça. Ela me deixou tão a vontade desde o primeiro dia, pra falar, pra chorar, pra perguntar, que sinto falta quando não temos essa hora da semana, mais até do que a espera pelo encontro com uma amiga de infância. 
+
+Não sei como ela faz isso, mas acerta nas palavras sempre! Até quando é pra dar aquele puxãozinho de orelha. E em cima disso, nunca me sinto julgada. 
+
+Sempre simpática, atenciosa, atenta aos detalhes (onde depois de meia dúzia de sessões já me conhecia como ninguém, por como eu dizia o “oi” no início da sessão), e preocupada em estar sendo ajuda e apoio.
+
+A sorte me deu a Nat como psicóloga e eu sou eternamente grata a isso."
+                </p>
+                <p>J. D., 28 anos </p>
               </div>
-              <!-- <div class="text-overline text-green-9 text-center q-pt-md">R$ 00,00</div> -->
             </q-card-section>
           </q-card>        
         </div>
       </q-carousel-slide>
       <q-carousel-slide :name="2" class="column no-wrap">
         <div class="row fit justify-center items-center q-gutter-xs q-col-gutter no-wrap">
-          <q-card class="col-xs-12 col-md-3 col-lg-3 col-xl-3" flat bordered>
+          <q-card class="col-xs-12 col-md-5 col-lg-4 col-xl-3" flat bordered>
             <q-card-section>
-              <div class="text-h5 q-mt-sm q-mb-xs">Title</div>
-              <div class="text-caption text-grey">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              <q-rating
+                v-model="ratingModel"
+                size="2em"
+                color="orange"
+                readonly
+              />
+              <div class="text-caption text-grey q-pt-md">
+                <p>
+                  "Desde o início, me passou muita segurança de poder me abrir. Com um sorrisão e sempre prestando bastante atenção, fez eu me sentir acolhido, que ela realmente estava querendo me ouvir e se importando com o que eu sentia e tinha para falar. Toda sessão é uma nova descoberta, e saio de lá com outra cabeça, reflexivo, mas mais leve do que entrei. Sinto que por mais imperfeito que eu me sinta, estou aos poucos descobrindo que todos são, e que há muita beleza nisso!"
+                </p>
+                <p>M. L., 24 anos </p>
               </div>
-              <!-- <div class="text-overline text-green-9 text-center q-pt-md">R$ 00,00</div> -->
             </q-card-section>
           </q-card> 
         </div>
       </q-carousel-slide>
       <q-carousel-slide :name="3" class="column no-wrap">
         <div class="row fit justify-center items-center q-gutter-xs q-col-gutter no-wrap">
-          <q-card class="col-xs-12 col-md-3 col-lg-3 col-xl-3" flat bordered>
+          <q-card class="col-xs-12 col-md-5 col-lg-4 col-xl-3" flat bordered>
             <q-card-section>
-              <div class="text-h5 q-mt-sm q-mb-xs">Title</div>
-              <div class="text-caption text-grey">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              <q-rating
+                v-model="ratingModel"
+                size="2em"
+                color="orange"
+                readonly
+              />
+              <div class="text-caption text-grey q-pt-md">
+                <p>
+                  "Profissional que me surpreendeu pela postura, conhecimento e maturidade profissional em sabe de suas limitações, fui um paciente difícil e criterioso mas em 8 meses de tratamento eu obtive o resultado esperado, com auxílio e dedicação da profissional."                
+                </p>
+                <p>J. O., 50 anos</p>
               </div>
-              <!-- <div class="text-overline text-green-9 text-center q-pt-md">R$ 00,00</div> -->
-            </q-card-section>
-          </q-card> 
-        </div>
-      </q-carousel-slide>
-      <q-carousel-slide :name="4" class="column no-wrap">
-        <div class="row fit justify-center items-center q-gutter-xs q-col-gutter no-wrap">
-          <q-card class="col-xs-12 col-md-3 col-lg-3 col-xl-3" flat bordered>
-            <q-card-section>
-              <div class="text-h5 q-mt-sm q-mb-xs">Title</div>
-              <div class="text-caption text-grey">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </div>
-              <!-- <div class="text-overline text-green-9 text-center q-pt-md">R$ 00,00</div> -->
             </q-card-section>
           </q-card> 
         </div>
@@ -234,6 +282,7 @@ useHead({
   const mailSent = ref(false)
   const isMobile = ref($q.platform.is.mobile)
   const forceRerenderFlag = ref(1)
+  const ratingModel = ref(5)
   const validateEmail = (email) => {
     const emailRegex = /^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/
     return emailRegex.test(email) || 'Insira um email válido'
@@ -343,7 +392,7 @@ p {
 .testimonials {
   display: flex;
   justify-content: space-between;
-  max-width: 60%;
+  max-width: 100%;
   margin: 20px auto;
   padding: 10px;
   animation: fadeIn 2s ease-out;
