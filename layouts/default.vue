@@ -47,27 +47,7 @@
       <router-view />
     </q-page-container>
 
-    <div v-if="isMobile" reveal bordered class="bg-secondary text-white q-pa-lg q-gutter-md" style="height: 150px;">
-      <div>
-        <div class="text"><a style="color: white" href="mailto:nataliasoaresrocha.psi@gmail.com">nataliasoaresrocha.psi@gmail.com</a></div>
-        <div class="text"> (11) 97354 9232 </div>
-        <div class="q-pt-md">
-          <a href="https://api.whatsapp.com/send/?phone=5511973549232&text&type=phone_number&app_absent=0" target="_blank">
-            <font-awesome-icon icon="fa-brands fa-whatsapp" style="font-size: 25px; margin-bottom: -8px; margin-right: 30px" class="text-secondary" />
-          </a>
-
-          <a href="https://instagram.com/nataliasoares.psi" target="_blank">
-            <font-awesome-icon icon="fa-brands fa-instagram" style="font-size: 25px; margin-bottom: -8px; margin-right: 30px" class="text-secondary" />
-          </a>
-
-          <a href="https://www.linkedin.com/in/natalia-psi06189758" target="_blank">
-            <font-awesome-icon icon="fa-brands fa-linkedin" style="font-size: 25px; margin-bottom: -8px; margin-right: 30px" class="text-secondary" />
-          </a>
-        </div>
-        
-      </div>
-    </div>
-    <div v-else reveal bordered class="row bg-secondary text-white" style="height: 150px; display: flex; align-items: center; justify-content: space-between;">
+    <div reveal bordered class="row bg-secondary text-white" style="height: 150px; display: flex; align-items: center; justify-content: space-between;">
       <div class="col-4">
         <!-- Conteúdo da div à esquerda -->
       </div>
@@ -94,12 +74,10 @@ export default defineComponent({
   setup () {
     const contato = ref(null)
     const $q = useQuasar()
-    const router = useRouter() // Obtenha o objeto do router
     const isMobile = ref($q.platform.is.mobile)
     const leftDrawerOpen = ref(false)
     const navigateTo = (routeName) => {
       leftDrawerOpen.value = false
-      console.log(routeName)
       if (routeName === 'home') {
         setTimeout(() => {
           window.scrollTo({

@@ -1,18 +1,18 @@
 <template>
   <div id="home" class="q-pa-md row q-gutter-md q-pb-xl justify-center q-pt-xl" :style="!isMobile ? 'background-color: #E9CFC2; height: 800px;' : 'background-color: #E9CFC2; height: 500px;'">
     <div v-if="!isMobile" class="col-md-4 text-right-md-col-md" style="max-width: 500px;">
-      <div v-if="!isMobile && $q.screen.width > 1000" :key="forceRerenderFlag" class="col-12 img-animation" style="display: flex; flex-direction: column; align-items: center;">
+      <div v-if="!isMobile && $q.screen.width > 1000" :key="forceRerenderFlag" class="col-12" style="display: flex; flex-direction: column; align-items: center;">
         <q-img
           src="/_nuxt/assets/SAVE_20230224_194933.jpg" 
           rounded="true" 
-          class="q-mb-md rounded-borders animate__animated animate__fadeInUpBig" 
+          class="q-mb-md rounded-borders animate__animated animate__fadeIn" 
           style="max-width: 400px; height: auto;">
         </q-img>
       </div>
     </div>
     <div class="" style="max-width: 400px;">
       <div class="row justify-center">
-        <img src="/_nuxt/assets/logo-principal.png" style="max-width: 350px">
+        <q-img src="/_nuxt/assets/logo-principal.png" style="max-width: 350px"></q-img>
       </div>
       <p class="text-center text-black" style="margin-top: -70px">
         <strong>CRP 06/189758</strong>
@@ -28,7 +28,7 @@
   <br>
   <div id="sobre" class="q-pa-md row q-gutter-md justify-center q-gutter-md" style="overflow-x: hidden;">
     <div :class="!isMobile ? 'col-xs-12 col-sm-12 col-md-5 col-lg-5 col-xl-5' : 'col-xs-12 col-md-2 q-pt-xl'" :key="forceRerenderFlag" style="max-width: 500px;">
-      <div class="text-h4 text-secondary text-left"><b> Sobre mim </b></div>
+      <div class="text-h4 text-secondary text-left animate__animated"><b> Sobre mim </b></div>
       <div style="margin-top: 55px" class="">
           <p><b>Psicóloga pela Universidade Cidade de São Paulo, e pós graduada em Fenomenologia-Existencial na Universidade Cruzeiro do Sul. Atendo adolescentes, adultos, casais e famílias através da Psicoterapia Humanista-Existencial, proporcionando um ambiente seguro e acolhedor para cada paciente. Acredito no desenvolvimento pleno de tudo que você pode se tornar. Acima de diagnósticos, existe um ser humano com uma história a ser revisitada, com feridas se curando e um futuro a viver.</b></p>
           <h6 class="text-left"><strong>Abordagem Humanista-Existencial</strong></h6>
@@ -38,9 +38,11 @@
     </div>
     <div :class="!isMobile ? '' : 'col-12'" :key="forceRerenderFlag">
       <q-img
+        data-aos="fade-left"
+        data-aos-duration="3000"
         src="/_nuxt/assets/5I6A2691.JPG" 
         rounded="true" 
-        class="q-mb-md rounded-borders animate__animated animate__fadeInRightBig animate__slow" 
+        class="q-mb-md rounded-borders" 
         :style="!isMobile ? 'max-width: 400px; height: auto; width: 400px' : 'max-width: 400px; height: auto;'">
       </q-img>
     </div>
@@ -49,7 +51,7 @@
 
   <div class="main-layout" style="margin-top: 100px">
     <header class="text-secondary">
-      <h2>"A psicoterapia permite o cuidado com a sua existência"</h2>
+      <h2 data-aos="fade-up" data-aos-delay="300" data-aos-duration="3000">"A psicoterapia permite o cuidado com a sua existência"</h2>
       <p style="font-size: 10px"> B. T. Sapienza </p>
     </header>
 

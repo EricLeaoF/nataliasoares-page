@@ -9,6 +9,7 @@
   },
   "devDependencies": {
     "nuxt": "^3.5.3",
+    "nuxt-aos": "^1.2.4",
     "nuxt-icon": "^0.6.10",
     "nuxt-quasar-ui": "^2.0.2",
     "sass": "^1.62.1"

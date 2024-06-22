@@ -1,5 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  aos: {
+    once: true
+  },
   link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   nitro: {
     devProxy: {
@@ -31,7 +34,7 @@ export default defineNuxtConfig({
       '@fortawesome/vue-fontawesome'
     ]
   },
-  modules: ['nuxt-quasar-ui', 'nuxt-icon'],
+  modules: ['nuxt-quasar-ui', 'nuxt-icon', 'nuxt-aos'],
   quasar: {
     animations: 'all',
     sassVariables: '@/assets/styles/quasar.variables.sass',
