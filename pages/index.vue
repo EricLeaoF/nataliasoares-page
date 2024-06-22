@@ -6,7 +6,7 @@
           src="/_nuxt/assets/SAVE_20230224_194933.jpg" 
           rounded="true" 
           class="q-mb-md rounded-borders animate__animated animate__fadeIn" 
-          style="max-width: 400px; height: auto;">
+          style="max-width: 400px; height: auto; --animate-duration: 2.5s;">
         </q-img>
       </div>
     </div>
@@ -62,17 +62,66 @@
     </section>
 
     <section class="testimonials">
-      <div class="text-column-1">
+      <div class="text-column-1" data-aos="fade-up" data-aos-delay="1000">
         <p>- É um processo de acolhimento e descoberta, livre de julgamentos</p>
       </div>
-      <div class="text-column-2 q-pa-lg text-center">
+      <div class="text-column-2 q-pa-lg text-center" data-aos="fade-up" data-aos-delay="1500">
         <p>- Pode te ajudar a se entender e enxergar novos horizontes</p>
       </div>
-      <div class="text-column-3">
+      <div class="text-column-3" data-aos="fade-up" data-aos-delay="2000">
         <p>- É sobre abraçar a sua história para um presente mais leve</p>
       </div>
     </section>
   </div>
+  <!-- <div class="text-center">
+    <h2> <b> A TERAPIA </b></h2>
+  </div> -->
+  <!-- <div class="row justify-center q-gutter-md">
+    <div class="col-2">
+      <q-card class="my-card">
+        <img src="https://cdn.quasar.dev/img/mountains.jpg">
+
+        <q-card-section>
+          <div class="col-12 text-center q-pb-lg">
+            <font-awesome-icon icon="fa-brands fa-linkedin" style="font-size: 25px; margin-bottom: -8px; margin-right: 30px" :class="class" />
+          </div>
+          <div class="text-h6">
+            É um processo de acolhimento e descoberta, livre de julgamentos
+          </div>
+        </q-card-section>
+
+        <q-card-section class="q-pt-none">
+          {{ lorem }}
+        </q-card-section>
+      </q-card>
+    </div>
+    <div class="col-2">
+      <q-card class="my-card">
+        <img src="https://cdn.quasar.dev/img/mountains.jpg">
+
+        <q-card-section>
+          <div class="text-h6">Pode te ajudar a se entender e enxergar novos horizontes</div>
+        </q-card-section>
+
+        <q-card-section class="q-pt-none">
+          {{ lorem }}
+        </q-card-section>
+      </q-card>
+    </div>
+    <div class="col-2">
+      <q-card class="my-card">
+        <img src="https://cdn.quasar.dev/img/mountains.jpg">
+
+        <q-card-section>
+          <div class="text-h6">É sobre abraçar a sua história para um presente mais leve</div>
+        </q-card-section>
+
+        <q-card-section class="q-pt-none">
+          {{ lorem }}
+        </q-card-section>
+      </q-card>
+    </div>
+  </div> -->
 
   <div class="col-12 text-h4 text-secondary text-center q-pb-lg q-pt-xl"><b> Avaliações </b></div>
   <div class="q-pa-md row bg-primary">
