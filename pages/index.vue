@@ -5,12 +5,12 @@
         <q-img
           src="/_nuxt/assets/SAVE_20230224_194933.jpg" 
           rounded="true" 
-          class="q-mb-md rounded-borders .fade-in" 
+          class="q-mb-md rounded-borders animate__animated animate__fadeInUpBig" 
           style="max-width: 400px; height: auto;">
         </q-img>
       </div>
     </div>
-    <div class="" style="max-width: 400px">
+    <div class="" style="max-width: 400px;">
       <div class="row justify-center">
         <img src="/_nuxt/assets/logo-principal.png" style="max-width: 350px">
       </div>
@@ -21,7 +21,7 @@
         <strong>Construindo um ambiente seguro para que você conheça a si mesmo!</strong> 
       </p>
       <div class="row q-pt-xl justify-center">
-        <q-btn href="https://api.whatsapp.com/send/?phone=5511973549232&text&type=phone_number&app_absent=0" target="_blank" label="Vamos conversar?" color="secondary" class="text-secondary col-xs-8 col-md-6 col-lg-6 col-xl-6 items-center"></q-btn>
+        <q-btn href="https://api.whatsapp.com/send/?phone=5511973549232&text&type=phone_number&app_absent=0" target="_blank" label="Vamos conversar?" color="secondary" class="text-secondary col-xs-8 col-md-6 col-lg-6 col-xl-6 items-center animate__animated animate__tada animate__delay-2s"></q-btn>
       </div>
     </div>
   </div>
@@ -40,7 +40,7 @@
       <q-img
         src="/_nuxt/assets/5I6A2691.JPG" 
         rounded="true" 
-        class="q-mb-md rounded-borders .fade-in" 
+        class="q-mb-md rounded-borders animate__animated animate__fadeInRightBig animate__slow" 
         :style="!isMobile ? 'max-width: 400px; height: auto; width: 400px' : 'max-width: 400px; height: auto;'">
       </q-img>
     </div>
@@ -242,6 +242,7 @@ useHead({
   import { useQuasar, LocalStorage } from 'quasar'
   import { onMounted } from 'vue'
   import axios from 'axios'
+  import 'animate.css'
 
   const $q = useQuasar()
   const slide = ref(1)
