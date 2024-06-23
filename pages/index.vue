@@ -3,7 +3,7 @@
     <div v-if="!isMobile" class="col-md-4 text-right-md-col-md" style="max-width: 500px;">
       <div v-if="!isMobile && $q.screen.width > 1000" :key="forceRerenderFlag" class="col-12" style="display: flex; flex-direction: column; align-items: center;">
         <q-img
-          src="/_nuxt/SAVE_20230224_194933.jpg" 
+          src="/_nuxt/assets/SAVE_20230224_194933.jpg" 
           rounded="true" 
           class="q-mb-md rounded-borders animate__animated animate__fadeIn" 
           style="max-width: 400px; height: auto; --animate-duration: 2.5s;">
@@ -12,7 +12,7 @@
     </div>
     <div class="" style="max-width: 400px;">
       <div class="row justify-center" style="height: 300px">
-        <q-img src="/_nuxt/logo-principal.png" style="max-width: 350px"></q-img>
+        <q-img src="/_nuxt/assets/logo-principal.png" style="max-width: 350px"></q-img>
       </div>
       <p class="text-center text-black" style="margin-top: -70px">
         <strong>CRP 06/189758</strong>
@@ -27,7 +27,7 @@
   </div>
   <br>
   <div id="sobre" class="q-pa-md row q-gutter-md justify-center q-gutter-md" style="overflow-x: hidden; overflow-y: hidden">
-    <div :class="!isMobile ? 'col-xs-12 col-sm-12 col-md-5 col-lg-5 col-xl-5' : 'col-xs-12 col-md-2 q-pt-xl'" :key="forceRerenderFlag" style="max-width: 500px;">
+    <div :class="!isMobile ? 'col-xs-12 col-sm-12 col-md-5 col-lg-5 col-xl-5' : 'col-xs-12 col-md-2 q-pt-xl q-pa-md'" :key="forceRerenderFlag" style="max-width: 500px;">
       <div class="text-h4 text-secondary text-left animate__animated"><b> Sobre mim </b></div>
       <div style="margin-top: 55px" class="">
           <p><b>Psicóloga pela Universidade Cidade de São Paulo, e pós graduada em Fenomenologia-Existencial na Universidade Cruzeiro do Sul. Atendo adolescentes, adultos, casais e famílias através da Psicoterapia Humanista-Existencial, proporcionando um ambiente seguro e acolhedor para cada paciente. Acredito no desenvolvimento pleno de tudo que você pode se tornar. Acima de diagnósticos, existe um ser humano com uma história a ser revisitada, com feridas se curando e um futuro a viver.</b></p>
@@ -40,7 +40,7 @@
       <q-img
         :data-aos="!isMobile ? 'fade-left' : 'fade-up'"
         :data-aos-duration="!isMobile ? '3000' : '1000'"
-        src="/_nuxt/5I6A2691.JPG" 
+        src="/_nuxt/assets/5I6A2691.JPG" 
         rounded="true" 
         class="q-mb-md rounded-borders" 
         :style="!isMobile ? 'max-width: 400px; height: auto; width: 400px' : 'max-width: 400px; height: auto;'">
@@ -48,7 +48,7 @@
     </div>
   </div>
 
-  <div class="main-layout" style="margin-top: 100px">
+  <div class="main-layout q-pt-xl" style="">
     <header class="text-secondary">
       <h2 data-aos="fade-up" data-aos-delay="300" data-aos-duration="2000">"A psicoterapia permite o cuidado com a sua existência"</h2>
       <p style="font-size: 10px"> B. T. Sapienza </p>
@@ -105,7 +105,7 @@
       <q-carousel-slide :name="1" class="column no-wrap">
         <div class="row fit justify-center items-center q-gutter-xs q-col-gutter no-wrap">
           <q-card class="col-xs-12 col-md-5 col-lg-4 col-xl-2" flat bordered>
-            <q-card-section>
+            <q-card-section style="min-height: 350px; height: 350px">
               <q-rating
                 v-model="ratingModel"
                 size="2em"
@@ -131,7 +131,7 @@ A sorte me deu a Nat como psicóloga e eu sou eternamente grata a isso."
       <q-carousel-slide :name="2" class="column no-wrap">
         <div class="row fit justify-center items-center q-gutter-xs q-col-gutter no-wrap">
           <q-card class="col-xs-12 col-md-5 col-lg-4 col-xl-2" flat bordered>
-            <q-card-section>
+            <q-card-section style="min-height: 350px; height: 350px">
               <q-rating
                 v-model="ratingModel"
                 size="2em"
@@ -151,7 +151,7 @@ A sorte me deu a Nat como psicóloga e eu sou eternamente grata a isso."
       <q-carousel-slide :name="3" class="column no-wrap">
         <div class="row fit justify-center items-center q-gutter-xs q-col-gutter no-wrap">
           <q-card class="col-xs-12 col-md-5 col-lg-4 col-xl-2" flat bordered>
-            <q-card-section>
+            <q-card-section style="min-height: 350px; height: 350px">
               <q-rating
                 v-model="ratingModel"
                 size="2em"
@@ -178,7 +178,7 @@ A sorte me deu a Nat como psicóloga e eu sou eternamente grata a isso."
     class="q-pa-md row justify-center q-gutter-md" 
     style="overflow-x: hidden;"
   >
-    <div :class="!isMobile ? 'col-xs-9 col-md-4 col-lg-4 col-xl-2 q-pt-xl' : 'col-xs-12 col-md-2 q-pt-xl q-pl-lg'" :key="forceRerenderFlag" style="max-width: 800px">
+    <div :class="!isMobile ? 'col-xs-9 col-md-4 col-lg-4 col-xl-2 q-pt-xl' : 'col-xs-12 col-md-2 q-pt-xl q-pa-md'" :key="forceRerenderFlag" style="max-width: 800px">
       <div class="text-h4 text-secondary"><b> Entre em contato </b></div>
         <p class="q-pt-lg q-pb-lg"> Atendimento online e presencial de segunda à sexta, das 8h às 21h </p>
         <font-awesome-icon icon="fas envelope" />
@@ -216,7 +216,7 @@ A sorte me deu a Nat como psicóloga e eu sou eternamente grata a isso."
     <div :class="!isMobile ? 'q-pt-xl col-xs-10 col-md-4 col-lg-4 col-xl-3' : 'col-12'" :key="forceRerenderFlag" style="max-width: 800px">
       <q-card v-if="!isMobile">
         <q-card-section>
-          <q-form action="https://formsubmit.co/nataliasoaresrocha.psi@gmail.com" method="post" class="q-gutter-md q-pa-xl" ref="myForm">
+          <q-form action="https://formsubmit.co/nataliasoaresrocha.psi@gmail.com" method="post" class="q-gutter-md q-pa-=" ref="myForm">
             <q-input color="secondary" v-model="name" label="Seu nome *" hint="Nome e sobrenome" name="name" lazy-rules :rules="[val => val && val.length > 0 || 'Insira um valor válido para o nome']" :disable="mailSent"></q-input>
             <q-input color="secondary" v-model="email" label="Seu email *" name="email" lazy-rules :rules="[val => validateEmail(val)]" :disable="mailSent"></q-input>
             <q-input color="secondary" v-model="phone" label="Telefone *" name="phone" lazy-rules mask="(##) #########" :rules="[val => val !== null && val !== '' || 'Insira um valor válido para o telefone']" :disable="mailSent"></q-input>
@@ -230,7 +230,7 @@ A sorte me deu a Nat como psicóloga e eu sou eternamente grata a isso."
           </q-form>
         </q-card-section>  
       </q-card>
-      <q-form v-else action="https://formsubmit.co/nataliasoaresrocha.psi@gmail.com" method="post" class="q-gutter-md q-pa-xl" ref="myForm">
+      <q-form v-if="isMobile" action="https://formsubmit.co/nataliasoaresrocha.psi@gmail.com" method="post" class="q-gutter-md q-pa-md" ref="myForm">
         <q-input color="secondary" v-model="name" label="Seu nome *" hint="Nome e sobrenome" name="name" lazy-rules :rules="[val => val && val.length > 0 || 'Insira um valor válido para o nome']" :disable="mailSent"></q-input>
         <q-input color="secondary" v-model="email" label="Seu email *" name="email" lazy-rules :rules="[val => validateEmail(val)]" :disable="mailSent"></q-input>
         <q-input color="secondary" v-model="phone" label="Telefone *" name="phone" lazy-rules mask="(##) #########" :rules="[val => val !== null && val !== '' || 'Insira um valor válido para o telefone']" :disable="mailSent"></q-input>
@@ -256,7 +256,7 @@ useHead({
   meta: [
     {
       name: "description",
-      content: "Psicóloga desde 2022, pela Universidade Cidade de São Paulo, e pós graduada em Fenomenologia-Existencial na Universidade Cruzeiro do Sul. Atendo adolescentes e adultos através da Psicoterapia Humanista Existencial, proporcionando um ambiente seguro e acolhedor para a promoção do bem-estar e desenvolvimento."
+      content: "Psicóloga graduada pela Universidade Cidade de São Paulo, e pós graduada em Psicologia Clínica na Universidade Cruzeiro do Sul. Atendo adolescentes e adultos através da Psicoterapia Humanista Existencial, proporcionando um ambiente seguro e acolhedor para a promoção do bem-estar e desenvolvimento."
     },
     {
       name: "keywords",
@@ -300,7 +300,7 @@ useHead({
   {
     title: '03',
     subtitle: 'Mudança de vida',
-    content: 'Pessoas transformaram suas vidas através da psicoterapia, encontrando equilíbrio e bem-estar. Suas histórias são inspiradoras.',
+    content: 'Pessoas transformaram suas vidas através da psicoterapia, encontrando equilíbrio e bem-estar.',
     image: 'image-success-stories.jpg',
     delay: 2000
   }
