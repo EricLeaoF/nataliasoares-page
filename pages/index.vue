@@ -1,9 +1,9 @@
 <template>
-  <div id="home" class="q-pa-md row q-gutter-md q-pb-xl justify-center q-pt-xl" :style="!isMobile ? 'background-color: #E9CFC2; height: 800px;' : 'background-color: #E9CFC2; height: 500px;'">
+  <div id="home" class="q-pa-md row q-gutter-md q-pb-xl justify-center q-pt-xl" :style="!isMobile ? 'background-color: #E9CFC2; height: 800px;' : 'background-color: #E9CFC2; height: 600px;'">
     <div v-if="!isMobile" class="col-md-4 text-right-md-col-md" style="max-width: 500px;">
       <div v-if="!isMobile && $q.screen.width > 1000" :key="forceRerenderFlag" class="col-12" style="display: flex; flex-direction: column; align-items: center;">
         <q-img
-          src="/_nuxt/assets/SAVE_20230224_194933.jpg" 
+          src="/_nuxt/SAVE_20230224_194933.jpg" 
           rounded="true" 
           class="q-mb-md rounded-borders animate__animated animate__fadeIn" 
           style="max-width: 400px; height: auto; --animate-duration: 2.5s;">
@@ -11,8 +11,8 @@
       </div>
     </div>
     <div class="" style="max-width: 400px;">
-      <div class="row justify-center">
-        <q-img src="/_nuxt/assets/logo-principal.png" style="max-width: 350px"></q-img>
+      <div class="row justify-center" style="height: 300px">
+        <q-img src="/_nuxt/logo-principal.png" style="max-width: 350px"></q-img>
       </div>
       <p class="text-center text-black" style="margin-top: -70px">
         <strong>CRP 06/189758</strong>
@@ -26,7 +26,7 @@
     </div>
   </div>
   <br>
-  <div id="sobre" class="q-pa-md row q-gutter-md justify-center q-gutter-md" style="overflow-x: hidden;">
+  <div id="sobre" class="q-pa-md row q-gutter-md justify-center q-gutter-md" style="overflow-x: hidden; overflow-y: hidden">
     <div :class="!isMobile ? 'col-xs-12 col-sm-12 col-md-5 col-lg-5 col-xl-5' : 'col-xs-12 col-md-2 q-pt-xl'" :key="forceRerenderFlag" style="max-width: 500px;">
       <div class="text-h4 text-secondary text-left animate__animated"><b> Sobre mim </b></div>
       <div style="margin-top: 55px" class="">
@@ -38,9 +38,9 @@
     </div>
     <div :class="!isMobile ? '' : 'col-12'" :key="forceRerenderFlag">
       <q-img
-        data-aos="fade-left"
-        data-aos-duration="3000"
-        src="/_nuxt/assets/5I6A2691.JPG" 
+        :data-aos="!isMobile ? 'fade-left' : 'fade-up'"
+        :data-aos-duration="!isMobile ? '3000' : '1000'"
+        src="/_nuxt/5I6A2691.JPG" 
         rounded="true" 
         class="q-mb-md rounded-borders" 
         :style="!isMobile ? 'max-width: 400px; height: auto; width: 400px' : 'max-width: 400px; height: auto;'">
@@ -48,82 +48,46 @@
     </div>
   </div>
 
-
   <div class="main-layout" style="margin-top: 100px">
     <header class="text-secondary">
-      <h2 data-aos="fade-up" data-aos-delay="300" data-aos-duration="3000">"A psicoterapia permite o cuidado com a sua existência"</h2>
+      <h2 data-aos="fade-up" data-aos-delay="300" data-aos-duration="2000">"A psicoterapia permite o cuidado com a sua existência"</h2>
       <p style="font-size: 10px"> B. T. Sapienza </p>
     </header>
 
     <section class="services">
       <div class="services-content bg-primary rounded-borders text-secondary">
-          <h2> <b> A TERAPIA </b></h2>
-      </div>
-    </section>
-
-    <section class="testimonials">
-      <div class="text-column-1" data-aos="fade-up" data-aos-delay="1000">
-        <p>- É um processo de acolhimento e descoberta, livre de julgamentos</p>
-      </div>
-      <div class="text-column-2 q-pa-lg text-center" data-aos="fade-up" data-aos-delay="1500">
-        <p>- Pode te ajudar a se entender e enxergar novos horizontes</p>
-      </div>
-      <div class="text-column-3" data-aos="fade-up" data-aos-delay="2000">
-        <p>- É sobre abraçar a sua história para um presente mais leve</p>
+          <h2> <b> Sobre o atendimento </b></h2>
       </div>
     </section>
   </div>
-  <!-- <div class="text-center">
-    <h2> <b> A TERAPIA </b></h2>
-  </div> -->
-  <!-- <div class="row justify-center q-gutter-md">
-    <div class="col-2">
-      <q-card class="my-card">
-        <img src="https://cdn.quasar.dev/img/mountains.jpg">
-
-        <q-card-section>
-          <div class="col-12 text-center q-pb-lg">
-            <font-awesome-icon icon="fa-brands fa-linkedin" style="font-size: 25px; margin-bottom: -8px; margin-right: 30px" :class="class" />
+  <div class="row q-gutter-md justify-center">
+    <q-card
+      class="my-card-2 q-mt-md col col-md-2 col-xs-12"
+      flat
+      v-for="(item, i) in myTextCard2"
+      :key="i"
+      style="max-width: 330px;"
+      data-aos="fade-up" 
+      :data-aos-delay="item.delay"
+    >
+      <q-card-section horizontal>
+        <q-card-section class="q-pt-md">
+          <div class="text-h5 text-grey-4 text-weight-bold q-ma-none q-pa-none">{{ item.title }}</div>
+          <div class=" title-card-2 text-subtitle1 my-card-text-color text-weight-bold">{{ item.subtitle }}</div>
+          <div class="text-caption text-grey">
+            {{ item.content }}
           </div>
-          <div class="text-h6">
-            É um processo de acolhimento e descoberta, livre de julgamentos
-          </div>
         </q-card-section>
+      </q-card-section>
+    </q-card>
 
-        <q-card-section class="q-pt-none">
-          {{ lorem }}
-        </q-card-section>
-      </q-card>
     </div>
-    <div class="col-2">
-      <q-card class="my-card">
-        <img src="https://cdn.quasar.dev/img/mountains.jpg">
-
-        <q-card-section>
-          <div class="text-h6">Pode te ajudar a se entender e enxergar novos horizontes</div>
-        </q-card-section>
-
-        <q-card-section class="q-pt-none">
-          {{ lorem }}
-        </q-card-section>
-      </q-card>
-    </div>
-    <div class="col-2">
-      <q-card class="my-card">
-        <img src="https://cdn.quasar.dev/img/mountains.jpg">
-
-        <q-card-section>
-          <div class="text-h6">É sobre abraçar a sua história para um presente mais leve</div>
-        </q-card-section>
-
-        <q-card-section class="q-pt-none">
-          {{ lorem }}
-        </q-card-section>
-      </q-card>
-    </div>
-  </div> -->
-
-  <div class="col-12 text-h4 text-secondary text-center q-pb-lg q-pt-xl"><b> Avaliações </b></div>
+  <div 
+    class="col-12 text-h4 text-secondary text-center q-pb-lg q-pt-xl" 
+    style="margin-top: 100px"
+  >
+    <b> Avaliações </b>
+  </div>
   <div class="q-pa-md row bg-primary">
     <q-carousel
       v-model="slide"
@@ -207,8 +171,14 @@ A sorte me deu a Nat como psicóloga e eu sou eternamente grata a isso."
     </q-carousel>
   </div>
 
-  <div class="q-pa-md row justify-center q-gutter-md" style="overflow-x: hidden;">
-    <div id="contato" :class="!isMobile ? 'col-xs-9 col-md-4 col-lg-4 col-xl-2 q-pt-xl' : 'col-xs-12 col-md-2 q-pt-xl q-pl-lg'" :key="forceRerenderFlag" style="max-width: 800px">
+  <div id="contato" style="margin-top: 1px"></div>
+  <div 
+    data-aos="fade-up" 
+    data-aos-duration="2000"
+    class="q-pa-md row justify-center q-gutter-md" 
+    style="overflow-x: hidden;"
+  >
+    <div :class="!isMobile ? 'col-xs-9 col-md-4 col-lg-4 col-xl-2 q-pt-xl' : 'col-xs-12 col-md-2 q-pt-xl q-pl-lg'" :key="forceRerenderFlag" style="max-width: 800px">
       <div class="text-h4 text-secondary"><b> Entre em contato </b></div>
         <p class="q-pt-lg q-pb-lg"> Atendimento online e presencial de segunda à sexta, das 8h às 21h </p>
         <font-awesome-icon icon="fas envelope" />
@@ -236,6 +206,11 @@ A sorte me deu a Nat como psicóloga e eu sou eternamente grata a isso."
               Natália Soares Rocha
             </a>
           </li>
+          <li>
+            <a target="_blank" class="contact-link"> <Icon style="font-size: 25px; margin-right: 9px; color: black" name="fa6-regular:flag"/>
+              Mogi das Cruzes, São Paulo
+            </a>
+          </li>
         </ul>
     </div>
     <div :class="!isMobile ? 'q-pt-xl col-xs-10 col-md-4 col-lg-4 col-xl-3' : 'col-12'" :key="forceRerenderFlag" style="max-width: 800px">
@@ -249,7 +224,7 @@ A sorte me deu a Nat como psicóloga e eu sou eternamente grata a isso."
             <div class="q-pb-md row justify-center">
               <q-btn label="Enviar" type="submit" color="secondary" :loading="loading" :disable="mailSent"></q-btn>
             </div>
-            <input type="hidden" value="http:localhost:3000/success" name="_next">
+            <input type="hidden" value="https://nataliasoaresrochapsi.com/success" name="_next">
             <input type="hidden" name="_cc" value="ericlf2015@hotmail.com">
             <input type="hidden" name="_autoresponse" value="Obrigado pelo envio. Logo entraremos em contato!">
           </q-form>
@@ -307,6 +282,30 @@ useHead({
   const isMobile = ref($q.platform.is.mobile)
   const forceRerenderFlag = ref(1)
   const ratingModel = ref(5)
+  const myTextCard2 = ref([
+  {
+    title: '01',
+    subtitle: 'A Importância da Terapia',
+    content: 'A terapia é um processo transformador que ajuda a entender e lidar com emoções complexas, promovendo o bem-estar emocional.',
+    image: 'image-therapy-importance.jpg',
+    delay: 1000
+  },
+  {
+    title: '02',
+    subtitle: 'Benefícios do Atendimento Online',
+    content: 'A terapia online oferece flexibilidade e conveniência, permitindo que você receba o suporte necessário de qualquer lugar.',
+    image: 'image-online-therapy.jpg',
+    delay: 1500
+  },
+  {
+    title: '03',
+    subtitle: 'Mudança de vida',
+    content: 'Pessoas transformaram suas vidas através da psicoterapia, encontrando equilíbrio e bem-estar. Suas histórias são inspiradoras.',
+    image: 'image-success-stories.jpg',
+    delay: 2000
+  }
+]);
+
   const validateEmail = (email) => {
     const emailRegex = /^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/
     return emailRegex.test(email) || 'Insira um email válido'

@@ -1,26 +1,7 @@
 <template>
   <q-layout view="lHh Lpr lFf">
     <div reveal elevated class="bg-white" style="height: 65px" >
-      <q-navbar v-if="isMobile">
-        <q-toolbar>
-          <q-btn flat round dense icon="menu" @click="leftDrawerOpen = !leftDrawerOpen" />
-        </q-toolbar>
-        <q-drawer show-if-above v-model="leftDrawerOpen" side="left" bordered>
-          <div class="q-pt-xl">
-            <q-tabs
-              vertical
-              class="text-secondary"
-            >
-              <q-tab clickable @click="navigateTo('home')">INÍCIO</q-tab>
-              <q-tab clickable @click="navigateTo('sobre')">SOBRE MIM</q-tab>
-              <q-tab clickable @click="navigateTo('contato')">CONTATO</q-tab>
-            </q-tabs>
-          </div>
-          
-        </q-drawer>
-        
-      </q-navbar>
-      <q-navbar v-else>
+      <q-navbar v-if="!isMobile">
         <q-tabs dense style="height: 50px;" class="text-secondary gt-xs">
           <q-space></q-space>
           <q-tab style="margin-left: 160px" clickable @click="navigateTo('home')">INÍCIO</q-tab>
@@ -39,6 +20,24 @@
             <font-awesome-icon icon="fa-brands fa-linkedin" style="font-size: 25px; margin-bottom: -8px; margin-right: 30px" class="text-secondary" />
           </a>
         </q-tabs>
+      </q-navbar>
+      <q-navbar v-if="isMobile">
+        <q-toolbar>
+          <q-btn flat round dense icon="menu" @click="leftDrawerOpen = !leftDrawerOpen" />
+        </q-toolbar>
+        <q-drawer show-if-above v-model="leftDrawerOpen" side="left" bordered>
+          <div class="q-pt-xl">
+            <q-tabs
+              vertical
+              class="text-secondary"
+            >
+              <q-tab clickable @click="navigateTo('home')">INÍCIO</q-tab>
+              <q-tab clickable @click="navigateTo('sobre')">SOBRE MIM</q-tab>
+              <q-tab clickable @click="navigateTo('contato')">CONTATO</q-tab>
+            </q-tabs>
+          </div>
+          
+        </q-drawer>
       </q-navbar>
       
     </div>
