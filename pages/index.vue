@@ -3,7 +3,7 @@
     <div v-if="!isMobile" class="col-md-4 text-right-md-col-md" style="max-width: 500px;">
       <div v-if="!isMobile && $q.screen.width > 1000" :key="forceRerenderFlag" class="col-12" style="display: flex; flex-direction: column; align-items: center;">
         <q-img
-          src="/_nuxt/assets/SAVE_20230224_194933.jpg" 
+          src="/_nuxt/SAVE_20230224_194933.jpg" 
           rounded="true" 
           class="q-mb-md rounded-borders animate__animated animate__fadeIn" 
           style="max-width: 400px; height: auto; --animate-duration: 2.5s;">
@@ -12,7 +12,7 @@
     </div>
     <div class="" style="max-width: 400px;">
       <div class="row justify-center" style="height: 300px">
-        <q-img src="/_nuxt/assets/logo-principal.png" style="max-width: 350px"></q-img>
+        <q-img src="/_nuxt/logo-principal.png" style="max-width: 350px"></q-img>
       </div>
       <p class="text-center text-black" style="margin-top: -70px">
         <strong>CRP 06/189758</strong>
@@ -40,7 +40,7 @@
       <q-img
         :data-aos="!isMobile ? 'fade-left' : 'fade-up'"
         :data-aos-duration="!isMobile ? '3000' : '1000'"
-        src="/_nuxt/assets/5I6A2691.JPG" 
+        src="/_nuxt/5I6A2691.JPG" 
         rounded="true" 
         class="q-mb-md rounded-borders" 
         :style="!isMobile ? 'max-width: 400px; height: auto; width: 400px' : 'max-width: 400px; height: auto;'">
