@@ -15,11 +15,11 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      title: 'Waterplug',
+      title: 'Natália Soares Rocha - Psicóloga',
       meta: [
         {
           name: "description",
-          content: "Waterplug description"
+          content: "Psicóloga graduada pela Universidade Cidade de São Paulo, e pós graduada em Psicologia Clínica na Universidade Cruzeiro do Sul. Atendo adolescentes e adultos através da Psicoterapia Humanista Existencial, proporcionando um ambiente seguro e acolhedor para a promoção do bem-estar e desenvolvimento."
         }
       ]
     }

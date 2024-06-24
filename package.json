@@ -21,6 +21,7 @@
     "@fortawesome/free-regular-svg-icons": "^6.5.2",
     "@fortawesome/free-solid-svg-icons": "^6.5.2",
     "@fortawesome/vue-fontawesome": "^3.0.6",
+    "@gtm-support/vue-gtm": "^3.0.1",
     "@nuxt/nitro": "^0.10.0",
     "@quasar/extras": "^1.16.4",
     "@quasar/vite-plugin": "^1.6.0",

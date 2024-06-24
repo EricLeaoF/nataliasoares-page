@@ -21,7 +21,7 @@
         <strong>Construindo um ambiente seguro para que você conheça a si mesmo!</strong> 
       </p>
       <div class="row q-pt-xl justify-center">
-        <q-btn href="https://api.whatsapp.com/send/?phone=5511973549232&text&type=phone_number&app_absent=0" target="_blank" label="Vamos conversar?" color="secondary" class="text-secondary col-xs-8 col-md-6 col-lg-6 col-xl-6 items-center animate__animated animate__tada animate__delay-2s"></q-btn>
+        <q-btn href="https://api.whatsapp.com/send/?phone=5511973549232&text&type=phone_number&app_absent=0" target="_blank" label="Vamos conversar?" color="secondary" class="text-secondary col-xs-8 col-md-6 col-lg-6 col-xl-6 items-center animate__animated animate__tada animate__delay-2s" id="mainClickWhatsapp"></q-btn>
       </div>
     </div>
   </div>
@@ -185,7 +185,7 @@ A sorte me deu a Nat como psicóloga e eu sou eternamente grata a isso."
         <ul class="q-gutter-md">
           <li>
             <font-awesome-icon icon="fa-brands fa-whatsapp" style="font-size: 25px; margin-bottom: -5px; margin-right: 10px" />
-            <a href="https://api.whatsapp.com/send/?phone=5511973549232&text&type=phone_number&app_absent=0" target="_blank" class="contact-link">
+            <a href="https://api.whatsapp.com/send/?phone=5511973549232&text&type=phone_number&app_absent=0" target="_blank" class="contact-link" id="mainClickWhatsapp">
               (11) 97354-9232
             </a>
           </li>

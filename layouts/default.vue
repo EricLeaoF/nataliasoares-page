@@ -8,7 +8,7 @@
           <q-tab clickable @click="navigateTo('sobre')">SOBRE MIM</q-tab>
           <q-tab clickable @click="navigateTo('contato')">CONTATO</q-tab>
           <q-space></q-space>
-          <a href="https://api.whatsapp.com/send/?phone=5511973549232&text&type=phone_number&app_absent=0" target="_blank">
+          <a href="https://api.whatsapp.com/send/?phone=5511973549232&text&type=phone_number&app_absent=0" target="_blank" id="mainClickWhatsapp">
             <font-awesome-icon icon="fa-brands fa-whatsapp" style="font-size: 25px; margin-bottom: -8px; margin-right: 30px" class="text-secondary" />
           </a>
 
