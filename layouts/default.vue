@@ -51,7 +51,7 @@
         <!-- Conteúdo da div à esquerda -->
       </div>
       <div class="col-12 text-center q-pb-xl">
-        <h8>©2024 por Natália Soares Rocha.</h8>
+        <h8>©2026 por Natália Soares Rocha.</h8>
       </div>
     </div>
   </q-layout>
